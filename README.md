@@ -1,1 +1,1 @@
-# food_detection_yolov5
+# food_detection_yolov5 team project
