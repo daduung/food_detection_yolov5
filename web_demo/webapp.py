@@ -19,8 +19,8 @@ args = parser.parse_args()
 #model = torch.hub.load(
 #     "ultralytics/yolov5", "yolov5s", pretrained=True, force_reload=True, autoshape=True
 #)  # force_reload = recache latest code
-model = torch.hub.load('/content/drive/MyDrive/project_2/yolov5/', 
-    'custom', path='/content/drive/MyDrive/project_2/best.pt', source='local')
+model = torch.hub.load('/content/drive/MyDrive/project2/yolov5/', 
+    'custom', path='/content/drive/MyDrive/project2/best.pt', source='local')
 model.eval()
 
 @app.route("/", methods=["GET", "POST"])
