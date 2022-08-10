@@ -11,7 +11,7 @@ import numpy as np
 import torch
 from flask import Flask, render_template, request, redirect
 
-info_100g = pd.read_csv('/content/drive/MyDrive/project2/info_100g.csv')
+info_100g = pd.read_csv('/content/drive/MyDrive/project2/info_100g_l.csv')
 
 
 app = Flask(__name__)
@@ -21,7 +21,7 @@ parser.add_argument("--port", default=5000, type=int, help="port number")
 args = parser.parse_args()
 
 model = torch.hub.load('/content/drive/MyDrive/project2/yolov5/', 
-    'custom', path='/content/drive/MyDrive/project2/bestx.pt', source='local')
+    'custom', path='/content/drive/MyDrive/project2/best_l.pt', source='local')
 model.eval()
 
 @app.route("/", methods=["GET", "POST"])
